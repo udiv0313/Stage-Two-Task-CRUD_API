@@ -4,6 +4,9 @@ import * as personController from '../controllers/personController.js';
 
 const personRoutes = express.Router();
 
+// Show all the Person
+personRoutes.get('/', personController.getAllPerson)
+
 // Create a new person
 personRoutes.post('/', personController.createPerson);
 
