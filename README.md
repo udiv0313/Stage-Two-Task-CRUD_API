@@ -59,6 +59,9 @@ POST http://localhost:3002/api
 }
 ```
 
+- **Postman Result**
+ ![POST Request](CrudOpImages/POST_REQUEST.png)
+
 ### 2. Fetch details of a person by ID 
 - **Endpoint**: GET /api/:id
 - **Example**: 
@@ -74,6 +77,8 @@ GET http://localhost:3002/api/1
   "name": "Victor Malik"
 }
 ```
+- **Postman Result**
+ ![GET Request by Id](CrudOpImages/GET_REQUEST.png)
 
 ### 3. Fetch details of a person by name 
 - **Endpoint**: GET /api?name={name}
@@ -92,6 +97,9 @@ GET http://localhost:3002/api?name=John Doe
   "name": "Victor Malik"
 }
 ```
+
+ - **Postman Result**
+ ![GET Request by name](CrudOpImages/GET_REQUEST.png)
 
 ### 4. Update details of an existing person by ID
 - **ndpoint**: GET /api/:id
@@ -116,6 +124,9 @@ PUT http://localhost:3002/api/1
 }
 ```
 
+-  **Postman Result**
+ ![PUT Request using ID](CrudOpImages/PUT_REQUEST.png)
+
 ### 5. Remove a person by ID
 
 - **Endpoint**: DELETE /api/:id
@@ -133,6 +144,11 @@ Endpoint: DELETE /api/:id
   "message": "Person deleted successfully"
 }
 ```
+- **Before Delete Request**
+  ![Before](CrudOpImages/DELETE_BEFORE.png)
+  
+- **After Delete Request**
+  ![Before](CrudOpImages/DELETE_Succefulpng.png)
 
 ## Error Handling
 
