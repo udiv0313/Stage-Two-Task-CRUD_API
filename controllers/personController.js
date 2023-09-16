@@ -1,6 +1,25 @@
 import { validationResult } from 'express-validator';
 import Person from '../models/personModel.js';
 
+
+export const getAllPerson = async (req, res) => {
+  try {
+    const persons = await Person.find()
+    
+    const formattedPerson = persons.map((person)=> {
+      return {
+        id: person.id,
+        name :  person.name
+      }
+    })
+
+    res.json(formattedPerson)
+  }  catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
+
+
 // Create a new person
 export const createPerson = async (req, res) => {
   try {
